@@ -1,0 +1,444 @@
+﻿@charset "utf-8";
+
+/* 基本レイアウト ここから↓ */
+@import url(common.css);
+body{
+  background-image: url(../images/bg.png);
+	background-repeat: no-repeat;
+  color: #5f5039;
+  font-size: 87.5%;
+  line-height: 1.5;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Zen Maru Gothic', sans-serif;
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center; 
+	 align-items: center;
+	 font-size: 20px;
+}
+#breadcrumb, #contents, footer{
+  margin: 0 auto 0 auto;
+  width: 840px;
+}
+header{
+  width: 100%;
+  display: flex;
+  margin: 0 0 30px 0;
+  background-color: #7acbe1;
+}
+header h1{
+  width: 25%;
+  font-size:30px;
+  padding: 13px 0;
+}
+div#hamburger{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+}
+nav{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+nav ul{
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+nav ul li{
+  float: left;
+  width: 25%;
+  color:white;
+  text-align: center;
+}
+header h1 a,
+nav ul li a{
+  height: 0;
+  color:#ffffff;
+  text-decoration:none;
+}
+#breadcrumb{
+  padding: 50px 0 50px 0;
+  width: -webkit-fill-available;
+}
+#contents{
+  overflow: hidden;
+}
+footer{
+  padding-top: 70px;
+}
+#main h1{
+  padding: 0 0 35px 0;
+  font-size: 156.25%;
+}
+#concept #nav_concept a,
+#plan #nav_plan a,
+#fair #nav_fair a,
+#contact #nav_contact a,
+nav ul li a:hover{
+  background-position: 0 -45px;  
+}
+.bnr_inner a p img:hover{
+  opacity: 0.8;
+}
+@media (max-width: 480px) {
+  footer {
+	  padding-top: 30px;
+  }
+}
+@media (max-width: 750px) {
+  body{
+    background-image : none;
+  }
+}
+@media (max-width: 950px) {
+  nav{
+    display: none;
+  }
+  header h1{
+    width: 100%;
+  }
+  #graphic, #contents, footer {
+  	margin: 0 auto;
+  	width: 95%;
+  }
+  /*ハンバーガーメニュー*/
+  .menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+  }
+  .menu-btn span,
+  .menu-btn span:before,
+  .menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 1px;
+    background-color: #ffffff;
+    position: absolute;
+  }
+  .menu-btn span:before {
+    bottom: 8px;
+  }
+  .menu-btn span:after {
+    top: 8px;
+  }
+  .menu-content ul {
+    padding: 70px 10px 0;
+  }
+  .menu-content ul li {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+  }
+  .menu-content ul li a{
+    color: #ffffff;
+  }
+  .menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 80;
+    background-color: #009bc6;
+    transition: all 0.5s;
+  }
+  #menu-btn-check {
+    display: none;
+  }
+  #menu-btn-check:checked ~ .menu-content {
+    left: 0;
+  }
+}
+@media (min-width: 950px) {
+  .hamburger-menu{
+    display: none;
+  }
+}
+
+/* 基本レイアウト ここまで↑ */
+
+/* トップページ ここから↓ */
+#index{
+  background-color: #99cc65;
+}
+.main_image{
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.sub_image{
+  position: absolute;
+  width: 8%;
+  height: auto;
+}
+#tori1{
+  top: 130px;
+  left: 30px; 
+  animation: moveright 3s ease forwards;
+}
+#tori2{
+  top: 200px;
+  right: 30px;
+  animation: moveleft 3s ease forwards;
+  animation-delay: 0.2s;
+}
+.move {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@keyframes moveright {
+  0% {
+    opacity: 1;
+    transform: translate(0,0);
+ }
+ 100% {
+    opacity: 1;
+    transform: translate(150px,-30px)
+ }
+}
+@keyframes moveleft {
+  0% {
+    opacity: 1;
+    transform: translate(0,0);
+ }
+ 100% {
+    opacity: 1;
+    transform: translate(-170px,-20px);
+ }
+}
+image{
+  width: 100%;
+}
+#news ul{
+  list-style-type: none;
+  padding-left: 0;
+}
+#news ul li{
+  padding: 20px 0 20px 175px;
+  border-bottom: 1px dotted #6c5f45; 
+  color: #342300;
+  text-indent: -175px;
+}
+#news ul li time{
+  display: inline-block;
+  width: 175px;
+  font-weight: bold;
+  color: #6c5f45;
+  text-indent: 0;
+}
+@media (max-width: 950px){
+  .sub_image{
+    display: none;
+  }
+}
+@media (max-width: 480px){
+  #news ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  #news ul li time{
+    text-indent: -175px;
+  }
+}
+/* トップページ ここまで↑ */
+
+/* 「キャラクター」ページ ここから↓ */
+.main_character{
+  overflow: hidden;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.sub_characters{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.sub_character{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+.sub_character_img{
+  width: 250px;
+  height: auto;
+}
+.shake:hover{
+  animation: anim_s 1s ease-in-out infinite alternate;
+}
+@keyframes anim_s {
+  50% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
+}
+@media (max-width: 810px) {
+  .main_character{
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* 「キャラクター」ページ ここまで↑ */
+
+/* 「スタンプ販売」ページ ここから↓ */
+
+.swiper {
+  width: 90%;
+  height: 250px;
+  margin: 100px auto;
+}
+.swiper-wrapper {
+  width: 100%;
+  height: 100px;
+}
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+.stamp_png{
+  object-fit:cover;
+  width: auto;
+  height: 80%;
+}
+.buy{
+  display: block;
+  width: 200px;
+  padding: 15px 0;
+  margin: auto;
+  background: #009bc6;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 30px;
+}
+.buy:hover{
+  background: #888888;
+  color: #ffffff;
+}
+.stamp{
+  display: flex;
+  justify-content: space-around;
+}
+.stamp_description{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stamp_description p{
+  text-align: center;
+}
+@media (max-width: 810px) {
+  .stamp{
+    flex-direction: column;
+    align-items: center;
+  }
+  .buy{
+    margin-bottom: 15px;
+  }
+  .swiper{
+    height: 150px;
+  }
+}
+@media (max-width: 400px){
+  .swiper{
+    height: 100px;
+  }
+}
+/* 「スタンプ販売」ページ ここまで↑ */
+
+/* 「ギャラリー」ページ ここから↓ */
+.episode {
+  padding: 0.2em 0.5em;
+  margin: 2em 2em;
+  background: #e6f0f0;
+  box-shadow: 0px 0px 0px 10px #e6f0f0;
+  /* border: dashed 2px white; */
+  border-radius: 8px;
+}
+.episode a{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.episode_img{
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px;
+}
+@media (max-width: 950px){
+  .episode a{
+    flex-direction: column;
+  }
+}
+@media (max-width: 950px){
+  .episode_img{
+    width: 95%;
+  }
+  .description p{
+    display: none;
+  }
+}
+/* 「ギャラリー」ページ ここまで↑ */
+
+/* 「お問い合わせ」ページ ここから↓ */
+form p{
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+form p:last-child{
+  margin-bottom: 0;
+}
+input[type="text"],
+input[type="email"],
+textarea{
+  width: 300px;
+  border: solid 3px #009bc6;
+  border-radius: 5px;
+}
+textarea{
+  width: 420px;
+  height: 115px;
+  overflow-y: scroll;
+}
+input[type="submit"]{
+  width: 200px;
+  padding: 15px 0;
+  margin: auto;
+  background: #009bc6;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 30px;
+}
+input[type="submit"]:hover{
+  background: #888888;
+  color: #ffffff;
+}
+@media (max-width: 450px){
+  input[type="text"],
+  input[type="email"],
+  textarea{
+    width: 90%;
+  }
+}
+/* 「お問い合わせ」ページ ここまで↑ */
