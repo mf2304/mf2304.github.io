@@ -51,6 +51,7 @@ nav ul{
 nav ul li{
   float: left;
   width: 25%;
+  height: 100%;
   color:white;
   text-align: center;
 }
@@ -59,9 +60,15 @@ nav ul li a{
   height: 0;
   color:#ffffff;
   text-decoration:none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #breadcrumb{
   padding: 50px 0 50px 0;
+  margin-left: 2%;
   width: -webkit-fill-available;
 }
 #contents{
@@ -74,15 +81,21 @@ footer{
   padding: 0 0 35px 0;
   font-size: 156.25%;
 }
-#concept #nav_concept a,
-#plan #nav_plan a,
-#fair #nav_fair a,
+#character #nav_character a,
+#stamp #nav_stamp a,
+#gallery #nav_gallery a,
 #contact #nav_contact a,
 nav ul li a:hover{
   background-position: 0 -45px;  
 }
 .bnr_inner a p img:hover{
   opacity: 0.8;
+}
+#pagetop{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
 }
 @media (max-width: 480px) {
   footer {
@@ -98,8 +111,14 @@ nav ul li a:hover{
   nav{
     display: none;
   }
+  #pagetop{
+    display: none;
+  }
   header h1{
     width: 100%;
+  }
+  header h1 a{
+    width: fit-content;
   }
   #graphic, #contents, footer {
   	margin: 0 auto;
@@ -116,6 +135,8 @@ nav ul li a:hover{
     justify-content: center;
     align-items: center;
     z-index: 90;
+    background-color: #7acbe1;
+    border-radius: 30px;
   }
   .menu-btn span,
   .menu-btn span:before,
@@ -143,6 +164,7 @@ nav ul li a:hover{
   }
   .menu-content ul li a{
     color: #ffffff;
+    font-size: 30px;
   }
   .menu-content {
     width: 100%;
@@ -151,7 +173,7 @@ nav ul li a:hover{
     top: 0;
     left: 100%;
     z-index: 80;
-    background-color: #009bc6;
+    background-color: #7acbe1;
     transition: all 0.5s;
   }
   #menu-btn-check {
@@ -159,6 +181,17 @@ nav ul li a:hover{
   }
   #menu-btn-check:checked ~ .menu-content {
     left: 0;
+  }
+  #menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  #menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  #menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
   }
 }
 @media (min-width: 950px) {
@@ -230,6 +263,8 @@ image{
   padding: 20px 0 20px 175px;
   border-bottom: 1px dotted #6c5f45; 
   color: #342300;
+  display: flex;
+  flex-direction: row;
   text-indent: -175px;
 }
 #news ul li time{
@@ -237,22 +272,18 @@ image{
   width: 175px;
   font-weight: bold;
   color: #6c5f45;
-  text-indent: 0;
 }
 @media (max-width: 950px){
   .sub_image{
     display: none;
   }
 }
-@media (max-width: 480px){
-  #news ul li{
+@media (max-width: 750px){
+#news ul li{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
-  }
-  #news ul li time{
-    text-indent: -175px;
   }
 }
 /* トップページ ここまで↑ */
@@ -296,6 +327,14 @@ image{
   .main_character{
     display: flex;
     flex-direction: column;
+  }
+  .description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .description p{
+    text-align: center;
   }
 }
 /* 「キャラクター」ページ ここまで↑ */
@@ -394,9 +433,6 @@ image{
 @media (max-width: 950px){
   .episode_img{
     width: 95%;
-  }
-  .description p{
-    display: none;
   }
 }
 /* 「ギャラリー」ページ ここまで↑ */

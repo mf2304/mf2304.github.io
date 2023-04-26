@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>スタンプ販売</title>
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/favicon-apple-touch.png">
+  <link rel="icon" type="image/png" href="images/favicon-android-chrome.png">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link
@@ -13,9 +16,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+  <script src="js/lib/jquery-3.6.4.min.js"></script>
+  <script src="js/script.js"></script>
 </head>
 
-<body id="plan">
+<body id="stamp">
 <header id="top">
   <h1><a href="index.html">しろくまくん</a></h1>
   <div class="hamburger-menu">
@@ -23,19 +28,19 @@
     <label for="menu-btn-check" class="menu-btn"><span></span></label>
     <div class="menu-content">
       <ul>
-        <li id="nav_concept"><a href="index.html">ホーム</a></li>
-        <li id="nav_concept"><a href="character.html">キャラクター</a></li>
-        <li id="nav_plan"><a href="stamp.html">スタンプ販売</a></li>
-        <li id="nav_fair"><a href="gallery.html">ギャラリー</a></li>
+        <li id="nav_index"><a href="index.html">ホーム</a></li>
+        <li id="nav_character"><a href="character.html">キャラクター</a></li>
+        <li id="nav_stamp"><a href="stamp.html">スタンプ販売</a></li>
+        <li id="nav_gallery"><a href="gallery.html">ギャラリー</a></li>
         <li id="nav_contact"><a href="contact.html">お問い合わせ</a></li>
       </ul>
     </div> 
   </div>
   <nav>
     <ul>
-      <li id="nav_concept"><a href="character.html">キャラクター</a></li>
-      <li id="nav_plan"><a href="stamp.html">スタンプ販売</a></li>
-      <li id="nav_fair"><a href="gallery.html">ギャラリー</a></li>
+      <li id="nav_character"><a href="character.html">キャラクター</a></li>
+      <li id="nav_stamp"><a href="stamp.html">スタンプ販売</a></li>
+      <li id="nav_gallery"><a href="gallery.html">ギャラリー</a></li>
       <li id="nav_contact"><a href="contact.html">お問い合わせ</a></li>
     </ul>
   </nav>
@@ -64,46 +69,46 @@
       </div>
       <div class="swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/1.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/2.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/3.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/4.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/5.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/6.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/7.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/8.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/9.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/10.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/11.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/12.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/13.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/14.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/15.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/16.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/17.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/18.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/19.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/20.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/21.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/22.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/23.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/24.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/25.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/26.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/27.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/28.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/29.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/30.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/31.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/32.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/33.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/34.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/35.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/36.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/37.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/38.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/39.png" alt=""></div>
-          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/40.png" alt=""></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/1.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/2.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/3.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/4.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/5.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/6.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/7.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/8.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/9.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/10.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/11.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/12.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/13.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/14.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/15.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/16.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/17.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/18.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/19.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/20.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/21.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/22.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/23.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/24.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/25.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/26.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/27.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/28.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/29.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/30.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/31.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/32.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/33.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/34.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/35.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/36.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/37.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/38.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/39.png" alt="スタンプ"></div>
+          <div class="swiper-slide"><img class="stamp_png" src="images/stamp/40.png" alt="スタンプ"></div>
         </div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
@@ -117,6 +122,6 @@
   <p id="copyright"><small>Copyright &copy;2023 mocod All rights reserved.</small></p>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script src="js/script.js"></script>
+<script src="js/swiper.js"></script>
 </body>
 </html>

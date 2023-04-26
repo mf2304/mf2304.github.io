@@ -10,6 +10,7 @@ img {
 }
 a {
 	color: #342300;
+	display: block;
 }
 a:hover {
 	color: #a24100;
@@ -23,6 +24,7 @@ header h1 a img {
 #breadcrumb ul {
 	list-style-type: none;
 	padding: 0;
+	display: flex;
 }
 #breadcrumb ul li {
 	display: inline;
